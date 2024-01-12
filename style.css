@@ -2,7 +2,11 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    
   }
+  header, main, footer {
+    transition: transform 0.5s ease-in-out;
+}
   
   .container {
     max-width: 1200px;
@@ -11,15 +15,16 @@ body {
   }
   .container h1{
     letter-spacing: 10px;
+    text-transform: uppercase;
   }
   .center{
     text-align: center;
   }
   header {
-    background-color: #3333336c;
+    background: rgb(222,213,213);
+    background: linear-gradient(90deg, rgba(222,213,213,0.5466561624649859) 4%, rgba(0,0,0,0.6026785714285714) 48%, rgba(0,0,8,0.8267682072829132) 90%);
     color: #fff;
     padding: 20px 0;
-    position: fixed;
     width: 100%;
   }
   
@@ -40,13 +45,13 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    margin-left: 7px;
   }
+
   
   .section {
     padding: 40px 0;
-    margin-top: 150px;
-    display: inline-block;
+    margin-top: 5px;
+
   }
   
   .services {
@@ -80,12 +85,15 @@ body {
     padding: 10px;
     border: none;
     cursor: pointer;
+    margin-bottom: 5px;
   }
-  
   button:hover {
     background-color: #555;
   }
-  
+  button>a {
+    text-decoration: none;
+    color:white;
+  }
   footer {
     background-color: #333;
     color: #fff;
@@ -93,8 +101,63 @@ body {
     padding: 10px 0;
   }
 
-  a:hover{
+  nav ul li a:hover{
     border-bottom: 3px solid white;
     padding-bottom: 4px;
-    transition: 0.4s;
+    transition: 0.2s;
   }
+
+
+
+
+
+
+
+  
+
+  .parallax-container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+    perspective-origin: 0 0;
+}
+
+.parallax-layer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.layer1 {
+    background: url('layer1.jpg') center/cover;
+    transform: translateZ(-1px) scale(2);
+}
+
+.layer2 {
+    background: url('img.jpg') center/cover;
+    transform: translateZ(-2px) scale(3);
+}
+
+.layer3 {
+    background: url('layer3.jpg') center/cover;
+    transform: translateZ(-3px) scale(4);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px;
+    color: #da0a0a;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+}
